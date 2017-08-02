@@ -19,7 +19,7 @@ puts "A decade consists of #{(10*year*day*hour).round} minutes"
 #How many seconds old am I?
 # I tried to install gem time_difference to use but didn't succeed.
 now = Time.now
-past = Time.new(1992,3,26, 12,00,0, "+09:00")
+past = Time.new(1992,3,26, 10,32,0, "+09:00")
 diff = now - past
 puts "I am #{diff.round} seconds old"
 
