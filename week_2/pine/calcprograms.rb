@@ -14,6 +14,7 @@ puts "A year consists of #{(year*day).round} hours"
 
 #How many minutes in a decade?
 # 1 decade = 10 years = 10 * 365 days = 10 * 365 * 24 hours = 10 * 365 * 24 * 60 minutes
+# Fix leap years?
 puts "A decade consists of #{(10*year*day*hour).round} minutes"
 
 #How many seconds old am I?
