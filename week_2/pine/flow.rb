@@ -21,6 +21,17 @@ end
 if bottles_on_wall == 0
     puts 'No more bottles of beer on the wall, no more bottles of beer.
 Go to the store and buy some more, 99 bottles of beer on the wall.'
+puts ' '
 end
 
 #Deaf Grandma program
+puts 'Talk to your deaf Grandma'
+response = ''
+while response != 'BYE'
+response = gets.chomp
+  if response != response.upcase
+    puts 'HUH?!  SPEAK UP, SONNY!'
+  else
+    puts "NO, NOT SINCE #{rand(1930..1950)}!"
+  end
+end
