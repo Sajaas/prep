@@ -23,8 +23,6 @@ Go to the store and buy some more, 99 bottles of beer on the wall.'
   bottles_on_wall_after -= 1
 end
 
-
-
 # Deaf Grandma program
 puts 'Talk to your deaf Grandma'
 response = ''
@@ -39,4 +37,17 @@ response = gets.chomp
   if response == 'BYE'
     times_said_bye += 1
   end
+end
+
+# Leap years
+puts 'What\'s the starting year?'
+starting_year = gets.chomp.to_i
+puts 'What\'s the ending year?'
+ending_year = gets.chomp.to_i
+puts ''
+while starting_year <= ending_year
+  if starting_year % 4 == 0 && (starting_year % 100 != 0 || starting_year % 400 == 0)
+    puts starting_year
+  end
+  starting_year += 1
 end
