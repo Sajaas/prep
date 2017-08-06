@@ -28,11 +28,15 @@ end
 # Deaf Grandma program
 puts 'Talk to your deaf Grandma'
 response = ''
-while response != 'BYE'
+times_said_bye = 0
+while times_said_bye < 3
 response = gets.chomp
   if response != response.upcase
     puts 'HUH?!  SPEAK UP, SONNY!'
   else
     puts "NO, NOT SINCE #{rand(1930..1950)}!"
+  end
+  if response == 'BYE'
+    times_said_bye += 1
   end
 end
