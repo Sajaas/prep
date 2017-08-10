@@ -1,25 +1,27 @@
 def fizz_buzz(number)
-  if has_zero_remainder?(number, 15)
-    'fizz buzz'
-  elsif has_zero_remainder?(number, 3)
-  'fizz'
-  elsif has_zero_remainder?(number, 5)
-    'buzz'
-  else
-    number
+  if (number.is_a? Integer) && (number > 0)
+    if has_zero_remainder?(number, 15)
+      'fizz buzz'
+    elsif has_zero_remainder?(number, 3)
+      'fizz'
+    elsif has_zero_remainder?(number, 5)
+      'buzz'
+    else
+      number
   end
+else
+  sad_path(number)
 end
-# how do I add a sad_path?
+end
 
 # sad_path if user inserts string, number < 0, or float instead of integer
 def sad_path(number)
-  case number
-  when String
-    'This is a string, not an integer'
-  when number < 0
-    'This is a negative number'
-  when Float
-    'This number has a fractional value, it is not an integer'
+  if number.is_a? String
+    'this is a string'
+  elsif number.is_a? Float
+    'this is a float'
+  else
+    'this is a negative number'
   end
 end
 
