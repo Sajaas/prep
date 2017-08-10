@@ -1,10 +1,10 @@
 def fizz_buzz(number)
-  if number % 3 == 0 && number % 15 != 0
-    'fizz'
-  elsif number % 5 == 0 && number % 15 != 0
-    'buzz'
-  elsif number % 15 == 0
+  if has_zero_remainder?(number, 15)
     'fizz buzz'
+  elsif has_zero_remainder?(number, 3)
+  'fizz'
+  elsif has_zero_remainder?(number, 5)
+    'buzz'
   else
     number
   end
@@ -21,4 +21,8 @@ def sad_path(number)
   when Float
     'This number has a fractional value, it is not an integer'
   end
+end
+
+def has_zero_remainder?(number, divider)
+  number % divider == 0
 end
